@@ -3,6 +3,8 @@ import { createClient } from '@/utils/supabase/server';
 import NewTweet from './new-tweet';
 import Tweets from './tweets';
 import AuthButtonServer from './login/auth-button-server';
+import PingButton from './ping-button';
+import Link from 'next/link';
 
 export default async function Home() {
   const supabase = createClient();
@@ -34,6 +36,8 @@ export default async function Home() {
       <AuthButtonServer />
       <NewTweet />
       <Tweets tweets={tweets} />
+      <PingButton />
+      <Link href={`/partial-threat/NQhDDsRGBLCxndIHSb0z`}>Threat</Link>
     </>
   );
 }
